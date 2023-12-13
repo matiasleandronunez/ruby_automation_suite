@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'parallel_tests'
+gem 'cuke_modeler'
+gem 'faker'
+gem 'rspec-expectations'
+gem 'playwright-ruby-client'
+gem 'parallel_report_portal', git: 'https://github.com/matiasleandronunez/parallel_cucumber_reports.git', branch: 'feature/support_offline_reports'
+#gem 'parallel_report_portal', path: '~/RubymineProjects/parallel_cucumber_reports'
