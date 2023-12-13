@@ -3,10 +3,10 @@ import { check, sleep } from 'k6';
 
 // Mix of front and API urls for users to GET
 const targetUrls = [
-    `${__ENV.base_uri}/index.html`,
-    `${__ENV.base_api_uri}/product/`,
-    `${__ENV.base_uri}/index.html#/checkout`,
-    `${__ENV.base_api_uri}/order/`,
+    `${__ENV.BASE_URI}/index.html`,
+    `${__ENV.BASE_API_URI}/product/`,
+    `${__ENV.BASE_URI}/index.html#/checkout`,
+    `${__ENV.BASE_API_URI}/order/`,
 ];
 
 export let options = {

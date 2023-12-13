@@ -4,6 +4,9 @@ require_relative 'helpers/request_sender'
 
 #Defines and loads into the Cucumber "World" the browser and api request context as instance variables
 module ExecutionContext
+  def base_uri
+    @base_uri ||= ENV['BASE_URI']
+  end
 end
 
 World(ExecutionContext)

@@ -14,9 +14,9 @@ Before do |scenario|
   playwright = Playwright.create(playwright_cli_executable_path: ENV['PLAYWRIGHT_CLI_EXECUTABLE_PATH']).playwright
 
   if is_an_api_test
-    @browser = playwright.chromium.launch(headless: true)
+    @browser = playwright.chromium.launch(headless: true, args: ['--disable-audio'])
   else
-    @browser = playwright.chromium.launch(headless: !ENV['HOST_HAS_GUI'] || false)
+    @browser = playwright.chromium.launch(headless: ENV['HOST_HAS_GUI'].upcase == "FALSE" || false, args: ['--disable-audio'])
     @page = @browser.new_page
   end
 

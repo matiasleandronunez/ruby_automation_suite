@@ -1,6 +1,6 @@
 Given('I go to the storefront') do
   @landing_page = Pages::LandingPage.new(@browser, @page)
-  @landing_page.navigate('http://localhost:8080')
+  @landing_page.navigate(base_uri)
 end
 
 When(/^I click on add ([0-9]+) times for ([A-Z|a-z|0-9\s]+)$/) do |quantity, item_name|
