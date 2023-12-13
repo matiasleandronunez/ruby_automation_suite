@@ -1,1 +1,1 @@
-parallel: -f ParallelReportPortal::Cucumber::Formatter --out /dev/null -f pretty
+parallel: -f ParallelReportPortal::Cucumber::Formatter --out /dev/null
