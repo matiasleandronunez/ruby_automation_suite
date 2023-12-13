@@ -33,11 +33,11 @@ services:
     container_name: cucumber_tests
     tty: true
     environment:
-      - base_uri=http://atsea:8080
-      - base_api_uri=http://atsea:8080/api
+      - BASE_URI=http://atsea:8080
+      - BASE_API_URI=http://atsea:8080/api
       - browser=chrome
       - rp_output_type=console_detailed
-      - PLAYWRIGHT_CLI_EXECUTABLE_PATH=~/../node_modules/.bin/playwright
+      - PLAYWRIGHT_CLI_EXECUTABLE_PATH=npx playwright
       - HOST_HAS_GUI=false
     networks:
       - front-tier
