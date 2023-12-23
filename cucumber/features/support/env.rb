@@ -9,7 +9,7 @@ module ExecutionContext
   end
 end
 
-World(ExecutionContext)
+World(execution_context: ExecutionContext)
 
 #One time Setup
 def self.before_all
