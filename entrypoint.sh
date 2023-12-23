@@ -9,5 +9,5 @@ cd ./cucumber
 #export HOST_HAS_GUI=false
 
 bundle install
-rake run_regression_parallel
+rake run_parallel_regression
 rake run_k6_load_test
