@@ -10,3 +10,6 @@ task :run_parallel_regression do |_t|
   system "ruby -S bundle exec parallel_cucumber -n 4 -t cucumber --group-by scenarios -o \"--profile 'parallel' --publish-quiet\""
 end
 
+task :run_parallel_regression_with_retries do |_t|
+  system "ruby -S bundle exec parallel_cucumber -n 4 -t cucumber --group-by scenarios -o \"--profile 'parallel' --publish-quiet --retry 2\""
+end

@@ -35,6 +35,7 @@ Or try running rake tasks individually.
 ```
 cd cucumber && rake run_regression
 cd cucumber && rake run_parallel_regression
+cd cucumber && rake run_parallel_regression_with_retries
 ```
 ```
 cd cucumber && rake run_k6_load_test
@@ -68,6 +69,7 @@ Execute `bundle install` and then you can run from command line using rake tasks
 
 - **run_regression**: Vanilla cucumber experience, sequential uses default formatter
 - **run_parallel_regression**: Parallel Cucumber using parallel_tests gem and formatters set in cucumber.yml
+- **run_parallel_regression_with_retries**: Parallel Cucumber using parallel_tests gem and formatters set in cucumber.yml, retries up to 2 times each test if first execution fails 
 - **run_k6_load_test**: Runs a load performance test as scripted in load_test_script.js. 
 - **run_k6_stress_test**: Runs a stress performance test as scripted in stress_test_script.js.
 - **run_k6_spike_test**: Runs a spike performance test as scripted in spike_test_script.js.
