@@ -1,6 +1,7 @@
 @users_feature
 Feature: Users
 
+  @id:0006
   Scenario: Create a new user
     Given I go to the storefront
     When I go to the user creation screen
