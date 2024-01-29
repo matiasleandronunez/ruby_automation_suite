@@ -25,6 +25,11 @@ services:
       - back-tier
     secrets:
       - postgres_password
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080" ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
 
   tests:
     build:
